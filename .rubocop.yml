@@ -1,0 +1,10 @@
+AllCops:
+  NewCops: disable
+  
+Metrics/BlockLength:
+  Exclude:
+    - "spec/server_spec.rb"
+
+Naming/MethodParameterName:
+  Exclude:
+    - "app/server.rb"
