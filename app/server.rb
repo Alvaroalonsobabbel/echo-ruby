@@ -10,6 +10,8 @@ before do
   @params = Sinatra::IndifferentHash.new
 end
 
+# Chose an in-memory storage to reduce the overhead of testing this locally.
+# Any persistent storage method could've been implemented, ie: PostgreSQL, DynamoDB, etc.
 ephemeral = MemoryStorage.new
 
 get '/endpoints' do

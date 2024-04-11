@@ -17,3 +17,40 @@ Note: this assumes you have ruby 3.2 and bundler installed.
 
 Use cURL or Postman to send http requests to the server at `http://127.0.0.1:4567`
 Server works using the exact API documentation specificed in the [requirements](echo.md#examples)
+
+## Quick cURL commands to test the server
+
+View endpoints:
+
+```bash
+curl -L -X GET 'http://127.0.0.1:4567/endpoints' 
+```
+
+Submit an endpoint:
+
+```bash
+curl -L -X POST 'http://127.0.0.1:4567/endpoints' \
+-H 'Content-Type: application/vnd.api+json' \
+-d '{
+    "data": {
+        "type": "endpoints",
+        "attributes": {
+            "verb": "GET",
+            "path": "/revert_entropy",
+            "response": {
+              "code": 200,
+              "headers": {},
+              "body": "\"{ \"message\": \"INSUFFICIENT DATA FOR MEANINGFUL ANSWER\" }\""
+            }
+        }
+    }
+}'
+```
+
+Now you can run View endpoints again to check the enpoint is there.
+
+Use the endpoint:
+
+```bash
+curl -L -X GET 'http://127.0.0.1:4567/revert_entropy' 
+```
