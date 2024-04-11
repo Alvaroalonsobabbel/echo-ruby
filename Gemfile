@@ -4,6 +4,8 @@ source 'https://rubygems.org'
 
 gem 'json'
 gem 'json_schemer'
+gem 'rack'
+gem 'rackup'
 gem 'sinatra'
 
 group :development, :test do

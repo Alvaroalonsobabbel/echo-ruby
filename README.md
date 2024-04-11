@@ -4,9 +4,11 @@ Echo code challenge based on [these requirements](echo.md)
 
 ## Techincal information
 
-This application was build using Ruby Sinatra and the endpoints use [JSON:API v1.0](https://jsonapi.org/) as a format.
+This application was built using Ruby Sinatra and the endpoints use [JSON:API v1.0](https://jsonapi.org/) as a format.
 
 ## Run locally
+
+Note: this assumes you have ruby 3.2 and bundler installed.
 
 1. clone the repo
 2. inside the repo directory run `bundle install`

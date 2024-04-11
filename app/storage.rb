@@ -23,6 +23,7 @@ class MemoryStorage
   end
 
   def create(endpoint)
+    # TO DO: implement duplicated ID check.
     endpoint[:data][:id] = rand(1..10_000)
     @storage << endpoint[:data]
     endpoint
