@@ -16,7 +16,7 @@ class MemoryStorage
       response = [
         item[:attributes][:response][:code],
         item[:attributes][:response][:headers],
-        item[:attributes][:response][:body]
+        item[:attributes][:response][:body].delete_prefix('"').delete_suffix('"')
       ]
     end
     response

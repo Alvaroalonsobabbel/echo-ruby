@@ -8,3 +8,7 @@ Metrics/BlockLength:
 Naming/MethodParameterName:
   Exclude:
     - "app/server.rb"
+
+Metrics/AbcSize:
+  Exclude:
+    - "app/storage.rb"
