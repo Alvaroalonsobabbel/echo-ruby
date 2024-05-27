@@ -18,6 +18,7 @@ class MemoryStorage
         item[:attributes][:response][:headers],
         item[:attributes][:response][:body].delete_prefix('"').delete_suffix('"')
       ]
+     break
     end
     response
   end
